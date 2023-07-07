@@ -2,6 +2,8 @@
 A simple way to save/read data from disk. 
 
 # Usage
+1. Add package dependency 
+
 ```
 let package = Package(
     name: "MyPackage"
@@ -21,6 +23,7 @@ let package = Package(
 ...
 ```
 
+2. Code example
 ```
 struct MyStruct: Codable {
     var id = UUID().uuidString
