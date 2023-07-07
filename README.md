@@ -3,6 +3,25 @@ A simple way to save/read data from disk.
 
 # Usage
 ```
+let package = Package(
+    name: "MyPackage"
+    ...
+    dependencies: [
+        .package(url: "https://github.com/AntonUdovychenko/DiskCache", branch: "main"),
+    ],
+    targets: [
+        .target(
+            name: "MyTarget",
+            dependencies: [
+                .product(name: "DiskCache", package: "DiskCache"),
+            ],
+        ...
+    ]
+)
+...
+```
+
+```
 struct MyStruct: Codable {
     var id = UUID().uuidString
     var name: String
